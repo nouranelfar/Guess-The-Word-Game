@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Guess The Word Game">
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+
+    <title>Guess The Word Game | devChallenges.io</title>
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @font-face {
+        font-family: "Inter" , sans-serif , "Outfit";
+        src: url("resources/Inter/Inter-VariableFont_opsz\,wght.ttf");
+        src: url("resources/Outfit/Outfit-VariableFont_wght.ttf");
+      }
+      body{
+        height: 100vh;
+        font-family: "Inter" , sans-serif , "Outfit";
+        color: #F2F5F9;
+        background: url("resources/bg-guess-the-word-small.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      main{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+      }
+      main #card{
+        background-color: #030616;
+        padding: 40px 30px;
+        width: 65%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        border-radius: 15px;
+        margin: auto 0;
+      }
+      main #card h1{
+        color: #7429C6;
+      }
+      main #card #word{
+        background-color: #4A5567;
+        height: 75px;
+        /* Text box shadow */
+        box-shadow: 0px 4px 0px 0px #000;
+        border-radius: 12px;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #details{
+        display: flex;
+        justify-content: space-between;
+      }
+      #tries_details{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .circles_container{
+        display: flex;
+        gap: 8px;
+      }
+      main #card .circle{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #4A5567;
+      }
+      #gussing_the_word{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 30px 0;
+      }
+      #gussing_the_word input{
+        width: 50px;
+        height: 50px;
+        background-color: #030616;
+        border: 2px solid #4A5567;
+        border-radius: 10px;
+        text-align: center;
+        color: #F2F5F9;
+        font-size: 20px;
+      }
+      #gussing_the_word input:focus{
+        outline: none;
+        border: #672171 2px solid;
+      }
+      .buttons_container{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+      .buttons_container button{
+        color: #F2F5F9;
+        background-color: #C951E7;
+        border: none;
+        filter: drop-shadow(0px 4px 0px #7b248a);
+        padding: 15px 50px;
+        border-radius: 12px;
+        font-size: 14px;
+      }
+
+      /*screens from 1024px to 1349px*/
+      @media (min-width: 1024px) and (max-width: 1349px) {
+        body{
+          background: url("resources/bg-guess-the-word.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        main #card{
+          width: 42%;
+        }
+      }
+      /* wider than 1350px screens*/
+      @media (min-width: 1350px) {
+        body{
+          background: url("resources/bg-guess-the-word.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        main #card{
+          width: 32%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  <main>
+    <div id="card">
+      <h1>Word Scramblle</h1>
+      <div id="word"></div>
+      <div id="details">
+        <div id="tries_details">
+          <p id="tries_num">Tries (0/5):</p>
+          <div class="circles_container">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+        </div>
+        <p>  Mistakes: <span id="mistake_words"> </span> </p>
+      </div>
+      <div id="gussing_the_word">
+      
+      </div>
+      <div class="buttons_container">
+        <button id="random">Random</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </main>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
