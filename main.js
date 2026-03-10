@@ -28,6 +28,7 @@ function createInputFields(){
     let item = document.createElement("input");
     item.type = "text";
     item.name = "input_cell";
+    item.setAttribute("aria-label","letter input")
     //write only one letter in every cell .
     item.maxLength = "1";
     gussingTheWord.appendChild(item);

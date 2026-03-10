@@ -42,7 +42,7 @@
       }
       main #card{
         background-color: #030616;
-        padding: 40px 30px;
+        padding: 30px;
         width: 65%;
         text-align: center;
         display: flex;
@@ -52,11 +52,14 @@
         margin: auto 0;
       }
       main #card h1{
-        color: #7429C6;
+        background: linear-gradient(to right , #7429C6 , #C951E7);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
       }
       main #card #word{
         background-color: #4A5567;
-        height: 75px;
+        height: 70px;
         /* Text box shadow */
         box-shadow: 0px 4px 0px 0px #000;
         border-radius: 12px;
@@ -91,7 +94,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
-        margin: 30px 0;
+        margin: 20px 0;
       }
       #gussing_the_word input{
         width: 50px;
@@ -113,13 +116,14 @@
         gap: 30px;
       }
       .buttons_container button{
-        color: #F2F5F9;
+        color: #FFFFFF;
         background-color: #C951E7;
         border: none;
         filter: drop-shadow(0px 4px 0px #7b248a);
         padding: 15px 50px;
         border-radius: 12px;
         font-size: 14px;
+        font-weight: 600;
       }
 
       /*screens from 1024px to 1349px*/
@@ -168,12 +172,12 @@
       
       </div>
       <div class="buttons_container">
-        <button id="random">Random</button>
-        <button id="reset">Reset</button>
+        <button id="random" title="random" name="random">Random</button>
+        <button id="reset" title="reset" name="reset">Reset</button>
       </div>
     </div>
   </main>
 
-    <script src="main.js" defer></script>
+    <script src="main.js?v=1.0" defer></script>
   </body>
 </html>
